@@ -52,15 +52,23 @@
         <groupId>com.microsoft.azure</groupId>  
         <artifactId>azure-webapp-maven-plugin</artifactId>  
         <version>2.5.0</version>  
-        <configuration> 
-          <schemaVersion>v2</schemaVersion>  
+        <configuration>
+          <schemaVersion>v2</schemaVersion>
+          <authType>azure_cli</authType>
           <resourceGroup>demorg</resourceGroup>  
           <appName>maven-demo</appName>  
           <pricingTier>B1</pricingTier>  
-          <region>centralus</region>  
+          <region>centralus</region>
+          <auth>
+            <tenant>745961a7-d85f-426e-bd60-5485597f872c</tenant>
+            <client>ef1460a4-29fa-48e5-bcd1-99d27d32c034</client>
+            <key>d6U8Q~R1xOPbDM65LrdQqMGT0IZeTRtq7q3yYcpl</key>
+            <environment>AZURE</environment>
+          </auth>
+
           <runtime> 
             <os>Linux</os>  
-            <javaVersion>Java 17</javaVersion>  
+            <javaVersion>Java 11</javaVersion>
             <webContainer>Tomcat 10.0</webContainer> 
           </runtime>  
           <deployment> 
